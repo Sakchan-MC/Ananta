@@ -39,6 +39,15 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('edit-content')}}"
+                        class="nav-link {{ (request()->is('admin/edit-content')) ? 'active' : '' }}">
+                        <i class="nav-icon far fa-image"></i>
+                        <p class="text-white">
+                            แก้ไขข้อมูลหน้าแรก
+                        </p>
+                    </a>
+                </li>
                 {{-- <li class="nav-item">
                     <a href="{{route('category')}}"
                 {{ (request()->is('admin/category')) ? 'active' : '' }}
@@ -85,5 +94,8 @@
     </ul>
     <div class="header-center">
         <a class="header-text">{{ (request()->is('admin/herb')) ? 'จัดการสมุนไพร' : '' }}</a>
+        <a class="header-text">{{ (request()->is('admin/edit-content')) ? 'แก้ไขข้อมูลหน้าแรก' : '' }}</a>
+        <a class="header-text">{{ (request()->is('admin/create')) ? 'เพิ่มข้อมูล' : '' }}</a>
+        <a class="header-text">{{ (request()->is('admin/edit')) ? 'แก้ไขข้อมูล' : '' }}</a>
     </div>
 </nav>

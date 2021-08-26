@@ -11,7 +11,7 @@
 
             <div class="row border-herb">
                 <div class="col-3">
-                    <img src="{{ asset('img/tippy.jpg') }}" style="width:200px;height:200px;">
+                    <img src="{{ asset('img/home-aloe.jpg') }}" style="width:200px;height:200px;">
                 </div>
                 <div class="col ">
                     <span class="size-large ">ว่านหางจระเข้</span><br>
@@ -30,7 +30,7 @@
             <div class="row border-herb">
 
                 <div class="col-3">
-                    <img src="{{ asset('img/tippy.jpg') }}" style="width:200px;height:200px;">
+                    <img src="{{ asset('img/herbs/Turmeric.jpg') }}" style="width:200px;height:200px;">
                 </div>
                 <div class="col">
                     <span class="size-large">ขมิ้นชัน</span>
@@ -48,7 +48,7 @@
             <div class="row border-herb">
 
                 <div class="col-3">
-                    <img src="{{ asset('img/tippy.jpg') }}" style="width:200px;height:200px;">
+                    <img src="{{ asset('img/herbs/Thong_Panchang.jpg') }}" style="width:200px;height:200px;">
                 </div>
                 <div class="col">
                     <span class="size-large">ทองพันชั่ง</span>
@@ -67,7 +67,7 @@
 
             <div class="row border-herb">
                 <div class="col-3">
-                    <img src="{{ asset('img/tippy.jpg') }}" style="width:200px;height:200px;">
+                    <img src="{{ asset('img/herbs/black_galingale.jpg') }}" style="width:200px;height:200px;">
                 </div>
                 <div class="col ">
                     <span class="size-large ">กระชายดำ</span><br>
@@ -85,7 +85,7 @@
             <div class="row border-herb">
 
                 <div class="col-3">
-                    <img src="{{ asset('img/tippy.jpg') }}" style="width:200px;height:200px;">
+                    <img src="{{ asset('img/herbs/Wan_persuaded.jpg') }}" style="width:200px;height:200px;">
                 </div>
                 <div class="col">
                     <span class="size-large">ว่านชักมดลูก</span>
@@ -105,7 +105,7 @@
             <div class="row border-herb">
 
                 <div class="col-3">
-                    <img src="{{ asset('img/tippy.jpg') }}" style="width:200px;height:200px;">
+                    <img src="{{ asset('img/herbs/red_freckles.jpg') }}" style="width:200px;height:200px;">
                 </div>
                 <div class="col">
                     <span class="size-large">กระเจี๊ยบแดง</span>
@@ -130,7 +130,7 @@
 
             <div class="row border-herb">
                 <div class="col-3">
-                    <img src="{{ asset('img/tippy.jpg') }}" style="width:200px;height:200px;">
+                    <img src="{{ asset('img/herbs/gooseberry.jpg') }}" style="width:200px;height:200px;">
                 </div>
                 <div class="col ">
                     <span class="size-large ">มะขามป้อม</span><br>
@@ -153,7 +153,7 @@
             <div class="row border-herb">
 
                 <div class="col-3">
-                    <img src="{{ asset('img/tippy.jpg') }}" style="width:200px;height:200px;">
+                    <img src="{{ asset('img/herbs/Andrographis_paniculata.jpg') }}" style="width:200px;height:200px;">
                 </div>
                 <div class="col">
                     <span class="size-large">ฟ้าทะลายโจร</span>
@@ -177,7 +177,7 @@
             <div class="row border-herb">
 
                 <div class="col-3">
-                    <img src="{{ asset('img/tippy.jpg') }}" style="width:200px;height:200px;">
+                    <img src="{{ asset('img/herbs/Yanang.jpg') }}" style="width:200px;height:200px;">
                 </div>
                 <div class="col">
                     <span class="size-large">ย่านาง</span>
@@ -204,7 +204,7 @@
 
             <div class="row border-herb">
                 <div class="col-3">
-                    <img src="{{ asset('img/tippy.jpg') }}" style="width:200px;height:200px;">
+                    <img src="{{ asset('img/herbs/Moringa.jpg') }}" style="width:200px;height:200px;">
                 </div>
                 <div class="col ">
                     <span class="size-large ">มะรุม</span><br>

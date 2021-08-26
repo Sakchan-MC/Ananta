@@ -2,12 +2,11 @@
 @section('content')
 <div class="wrapper container-fluid">
     <div class="content-wrapper  table-margin">
-        <h1 class="text-center">เพิ่มข้อมูล</h1>
         <form action="" method="post">
             @csrf
             <div class="form-group">
                 <label for="name">ชื่อ</label>
-                <input type="text" class="form-control" id="name" name="name" value="ว่านหางจระเข้">
+                <input type="text" class="form-control" id="name" name="name" value="">
             </div>
 
             <div class="form-group">

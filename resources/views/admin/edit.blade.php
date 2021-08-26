@@ -2,7 +2,6 @@
 @section('content')
 <div class="wrapper container-fluid">
     <div class="content-wrapper  table-margin">
-        <h1 class="text-center">แก้ไขข้อมูล</h1>
         <form action="" method="post">
             @csrf
             <div class="form-group">

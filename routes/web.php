@@ -44,6 +44,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('chat', function () {
             return view('admin/chat');
         })->name('chat');
+        Route::get('edit-content', function () {
+            return view('admin/edit-content');
+        })->name('edit-content');
 
         //Category
         Route::get('category', 'CategoryController@index')->name('category');

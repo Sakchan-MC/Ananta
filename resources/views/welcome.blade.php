@@ -37,7 +37,7 @@
 
                 </div>
                 <div class="col  text-center">
-                    <img src="{{ asset('img/home-1.jpg') }}" class="img-border">
+                    <img src="{{ asset('img/home-2.jpg') }}" class="img-border">
                 </div>
 
             </div>
@@ -45,12 +45,12 @@
         <nav id="n2">
             <div class=" row justify-content-between animation-element slide-right align-items-center">
                 <div class="col  text-center">
-                    <img src="{{ asset('img/home-1.jpg') }}" class="img-border">
+                    <img src="{{ asset('img/home-2.jpg') }}" class="img-border">
                 </div>
                 <div class="col text-center ">
-                    <span class="home-font">ทางเลือกในการรักษาสุขภาพ</span>
+                    <span class="home-font">สรรพคุณของสมุนไพร</span>
                     <br>
-                    <a class="btn btn-primary btn-text">ศึกษาเพิ่มเติม</a>
+                    <a class="btn btn-primary btn-text">ตัวอย่างสมุนไพร</a>
                 </div>
             </div>
         </nav>
@@ -58,7 +58,7 @@
     <br>
     <div class=" row justify-content-between animation-element slide-right align-items-center">
         <div class="col  text-center">
-            <img src="{{ asset('img/tippy.jpg') }}" class="img-border">
+            <img src="{{ asset('img/home-3.png') }}" class="img-border">
         </div>
         <div class="col text-center ">
             <span class="home-font ">ปรึกษาแพทย์</span>
@@ -106,26 +106,23 @@
 
     <h2 class="text-center home-font">ตัวอย่างสมุนไพร</h2>
     <br>
-
     <div class=" row justify-content-between animation-element slide-right align-items-center">
-        <div class="col  text-center ">
-            <img src="{{ asset('img/home-aloe.jpg') }}" class="img-border ">
+        <div class="col  text-center">
+            <img src="{{ asset('img/herbs/Thai_cardamom.jpg') }}" class="img-border">
         </div>
-        <div class="col  ">
-            <span class="home-font">กระวานไทย</span>
+        <div class="col">
+            <span class="home-font ">กระวานไทย</span>
             <br>
-            <p class="text-p"> ผลแก่ รสเผ็ดร้อน กลิ่นหอม ใช้แก้อาหารท้องอืด ท้องเฟ้อ
-                ช่วยขับลม และแก้แน่นจุกเสียด มีฤทธิ์ขับลม และบำรุงธาตุ แก้ธาตุไม่ปกติ บำรุงกำลัง
-                ขับโลหิต แก้ลมในอกให้ปิดธาตุ แก้ลมเสมหะให้ปิดธาตุ แก้ลมในลำไส้ เจริญอาหาร
-                รักษาโรครำมะนาด แก้ลมสันนิบาต แก้สะอึก แก้อัมพาตรักษาอาการเบื่ออาหาร คลื่นไส้
-                อาเจียน เมล็ด แก้ธาตุพิการ อุจจาระพิการ บำรุงธาตุ ขับเสมหะ แก้ปวดท้อง ขับลม
-            </p>
+            <p class="text-p">ผลแก่ รสเผ็ดร้อน กลิ่นหอม ใช้แก้อาหารท้องอืด ท้องเฟ้อช่วยขับลม และแก้แน่นจุกเสียด
+                มีฤทธิ์ขับลม และบำรุงธาตุ แก้ธาตุไม่ปกติ บำรุงกำลังขับโลหิต แก้ลมในอกให้ปิดธาตุ แก้ลมเสมหะให้ปิดธาตุแก้ลมในลำไส้ 
+                เจริญอาหารรักษาโรครำมะนาด แก้ลมสันนิบาต แก้สะอึก แก้อัมพาตรักษาอาการเบื่ออาหาร 
+                คลื่นไส้อาเจียน เมล็ด แก้ธาตุพิการ อุจจาระพิการ บำรุงธาตุ ขับเสมหะแก้ปวดท้อง ขับลม</p>
         </div>
     </div>
     <br>
     <div class=" row justify-content-between animation-element slide-right align-items-center">
         <div class="col  text-center">
-            <img src="{{ asset('img/tippy.jpg') }}" class="img-border">
+            <img src="{{ asset('img/herbs/lemon_grass.jpg') }}" class="img-border">
         </div>
         <div class="col ">
             <span class="home-font ">ตะไคร้</span>
