@@ -39,17 +39,18 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{route('category')}}"
-                        class="nav-link {{ (request()->is('admin/category')) ? 'active' : '' }}">
-                        <i class="nav-icon far fa-image"></i>
-                        <p class="text-white">
-                            จัดการประเภท
-                        </p>
-                    </a>
-                </li>
+                {{ (request()->is('admin/category')) ? 'active' : '' }}
+                class="nav-link ">
+                <i class="nav-icon far fa-image"></i>
+                <p class="text-white">
+                    จัดการประเภท
+                </p>
+                </a>
+                </li> --}}
                 <li class="nav-item">
-                    <a href="pages/kanban.html" class="nav-link">
+                    <a href="{{route('chat')}}" class="nav-link {{ (request()->is('admin/chat')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-columns"></i>
                         <p class="text-white">
                             กล่องข้อความ

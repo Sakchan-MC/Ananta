@@ -23,7 +23,7 @@
         <div class="col text-center ">
             <span class="home-font">ทางเลือกในการรักษาสุขภาพ</span>
             <br>
-            <a class="btn btn-primary btn-text">ศึกษาเพิ่มเติม</a>
+            <a href="#herb" class="btn btn-primary btn-text">ศึกษาเพิ่มเติม</a>
         </div>
     </div>
     <br>
@@ -33,7 +33,7 @@
             <div class=" row justify-content-between animation-element slide-right align-items-center">
                 <div class="col text-center ">
                     <span class="home-font">สรรพคุณของสมุนไพร</span> <br>
-                    <a class="btn btn-primary btn-text">ตัวอย่างสมุนไพร</a>
+                    <a href="#herbs" class="btn btn-primary btn-text">ตัวอย่างสมุนไพร</a>
 
                 </div>
                 <div class="col  text-center">
@@ -63,7 +63,41 @@
         <div class="col text-center ">
             <span class="home-font ">ปรึกษาแพทย์</span>
             <br>
-            <p class="btn btn-primary btn-text">ติดต่อ</p>
+            <a href="#contact" class="btn btn-primary btn-text">ติดต่อ</a>
+        </div>
+    </div>
+</section>
+<section id="herb" class="home-section container">
+    <div class=" row justify-content-between animation-element slide-right">
+        <div class="col ">
+            <span class="home-font  text-center">สมุนไพร</span>
+            <br>
+            <p class="text-p text-justify">
+                คำว่า “สมุนไพร” หมายความว่า ยาที่ได้มาจากพืช สัตว์
+                แร่ธาตุจากธรรมชาติที่ไม่มีการเปลี่ยนแปลงสภาพโครงสร้างภายใน
+                สามารถนำมาใช้เป็นยารักษาโรคต่างๆ และบำรุงร่างกายได้ ประเภทของสมุนไพร
+                สมุนไพรที่ได้จากส่วนของพืชโดยตรง <br>(พืชวัตถุ) โดยส่วนต่างๆ ที่นำมานั้นมีสารที่สามารถใช้เป็นยาได้
+                ได้แก่ ใบ ดอก ผล เปลือกผล เมล็ด เป็นต้น
+                สมุนไพรที่ได้จากอวัยวะของสัตว์ (สัตว์วัตถุ) ได้แก่ ตับ ดี นอ เขา เอ็น เลือด น้ำมัน มูล ฯลฯ เช่น ขี้ผึ้ง
+                รังนก
+                น้ำมันตับปลา สมุนไพรที่ได้จากแร่โดยธรรมชาติหรือสิ่งที่ประกอบขึ้นจากแร่ธาตุต่างๆ ตามกรรมวิธี
+                (ธาตุวัตถุ) นำมาใช้เป็นยา เช่น เกลือ กำมะถัน น้ำประสานทอง ดีเกลือ สารส้ม
+                การจำแนกรูปแบบของสมุนไพรที่ใช้เป็นยา<br><br>
+
+                1. รูปแบบที่เป็นของเหลว ยาเหล่านี้มักได้จากกรรมวิธีต่างๆ กันเช่น ยาต้มคือหั่นต้นยาแล้วต้มกับน้ำ
+                ยาชงเป็นยาแห้งหั่นเป็นชิ้นเล็กๆ คั่วแล้วนำไปชงกับน้ำ เป็นต้น<br><br>
+
+                2. รูปแบบที่เป็นของแข็ง ยาปั้นลูกกลอน เตรียมโดยหั่นต้นไม้ยาสดให้เป็นแว่นบางๆ ตากแดดให้แห้ง บดเป็นผง
+                ผสมกับน้ำผึ้งหรือน้ำเชื่อม 1 ส่วน
+                ปั้นเป็นลูกกลมๆ เล็กๆ ขนาดเส้นผ่าศูนย์กลาง 1 เซนติเมตร ปั้นเสร็จผึ่งแดดจนแห้ง<br><br>
+
+                3. รูปแบบที่กึ่งแข็งกึ่งเหลว สมุนไพรเหล่านี้จะทำให้อยู่ในลักษณะพอทรงตัวได้ มักใช้เพื่อการรักษาภายนอก
+                เช่น
+                ยาพอก เตรียมโดยใช้ต้นสดตำให้แหลกหรือเหลว<br><br>
+
+                4. รูปแบบอื่นๆ ที่มีลักษณะการใช้พิเศษ เช่นใช้วิธีรมควัน เพื่อรักษาโรคของทางเดินหายใจ
+                หรือการรมควันเพื่อรักษาแผล และให้มดลูกเข้าอู่ในสตรีภายหลังคลอด
+            </p>
         </div>
     </div>
 </section>
@@ -73,51 +107,49 @@
     <h2 class="text-center home-font">ตัวอย่างสมุนไพร</h2>
     <br>
 
-    <div class=" row justify-content-between animation-element slide-right">
-        <div class="col  text-center">
-            <img src="{{ asset('img/home-aloe.jpg') }}" class="img-border">
+    <div class=" row justify-content-between animation-element slide-right align-items-center">
+        <div class="col  text-center ">
+            <img src="{{ asset('img/home-aloe.jpg') }}" class="img-border ">
         </div>
-        <div class="col text-center ">
-            <span class="home-font">ว่านหางจระเข้ </span>
+        <div class="col  ">
+            <span class="home-font">กระวานไทย</span>
             <br>
-            <p class="btn-text">ไม้ล้มลุกใบใหญ่หนาที่ทุกคนรู้จักกันดี
-                แม้ถิ่นกำเนิดจะอยู่ไกลถึงฝั่งเมดิเตอร์ เรเนียน และแอฟริกา
-                แต่ในประเทศไทยก็มีการปลูกว่านหางจระเข้อย่างแพร่หลาย
-                ซึ่งในตำรับยาไทยก็ใช้ว่านหางจระเข้บำบัดอาการต่าง ๆ ได้มากมาย
-                จนเป็นที่รู้จักว่า เป็นพืชอัศจรรย์ที่มีสรรพคุณสารพัดประโยชน์ โดย “วุ้นในใบสด”
-                สามารถนำมาบรรเทาอาการปวดศีรษะได้</p>
+            <p class="text-p"> ผลแก่ รสเผ็ดร้อน กลิ่นหอม ใช้แก้อาหารท้องอืด ท้องเฟ้อ
+                ช่วยขับลม และแก้แน่นจุกเสียด มีฤทธิ์ขับลม และบำรุงธาตุ แก้ธาตุไม่ปกติ บำรุงกำลัง
+                ขับโลหิต แก้ลมในอกให้ปิดธาตุ แก้ลมเสมหะให้ปิดธาตุ แก้ลมในลำไส้ เจริญอาหาร
+                รักษาโรครำมะนาด แก้ลมสันนิบาต แก้สะอึก แก้อัมพาตรักษาอาการเบื่ออาหาร คลื่นไส้
+                อาเจียน เมล็ด แก้ธาตุพิการ อุจจาระพิการ บำรุงธาตุ ขับเสมหะ แก้ปวดท้อง ขับลม
+            </p>
         </div>
     </div>
     <br>
-    <div class=" row justify-content-between animation-element slide-right">
+    <div class=" row justify-content-between animation-element slide-right align-items-center">
         <div class="col  text-center">
             <img src="{{ asset('img/tippy.jpg') }}" class="img-border">
         </div>
-        <div class="col text-center ">
-            <span class="home-font ">ว่านหางจระเข้</span>
+        <div class="col ">
+            <span class="home-font ">ตะไคร้</span>
             <br>
-            <p class="btn-text">ไม้ล้มลุกใบใหญ่หนาที่ทุกคนรู้จักกันดี
-                แม้ถิ่นกำเนิดจะอยู่ไกลถึงฝั่งเมดิเตอร์ เรเนียน และแอฟริกา
-                แต่ในประเทศไทยก็มีการปลูกว่านหางจระเข้อย่างแพร่หลาย
-                ซึ่งในตำรับยาไทยก็ใช้ว่านหางจระเข้บำบัดอาการต่าง ๆ ได้มากมาย
-                จนเป็นที่รู้จักว่า เป็นพืชอัศจรรย์ที่มีสรรพคุณสารพัดประโยชน์ โดย “วุ้นในใบสด”
-                สามารถนำมาบรรเทาอาการปวดศีรษะได้</p>
+            <p class="text-p">ทั้งต้น ใช้เป็นยารักษาโรคหืด แก้ปวดท้อง ขับปัสสาวะและแก้อหิวาตกโรค
+                หรือทำเป็นยาทานวดก็ได้ และยังใช้รวมกับสมุนไพรชนิดอื่นรักษาโรคได้ เช่น บำรุงธาตุ
+                เจริญอาหาร และขับเหงื่อหัว เป็นยารักษาเกลื้อน แก้ท้องอืดท้องเฟ้อ แก้อาการขัดเบา ใบสด ๆ
+                จะช่วยลดความดันโลหิตสูง แก้ไข้ราก ใช้เป็นยาแก้ไข้เหนือ ปวดท้องและท้องเสียต้นใช้เป็นยาแก้ขับลม
+                แก้เบื่ออาหาร แก้ผมแตก แก้โรคทางเดินปัสสาวะ นิ่ว เป็นยาบำรุงไฟธาตุให้เจริญแต่ถ้าเอาผสมกับสมุนไพรชนิดอื่น
+                จะแก้โรคหนองใน และนอกจากนี้ยังใช้ดับกลิ่นคาวด้วย</p>
         </div>
     </div>
     <br>
-    <div class=" row justify-content-between animation-element slide-right">
+    <div class=" row justify-content-between animation-element slide-right align-items-center">
         <div class="col  text-center">
-            <img src="{{ asset('img/tippy.jpg') }}" class="img-border">
+            <img src="{{ asset('img/gotukola.jpg') }}" class="img-border">
         </div>
-        <div class="col text-center ">
-            <span class="home-font ">ว่านหางจระเข้</span>
+        <div class="col">
+            <span class="home-font ">บัวบก</span>
             <br>
-            <p class="btn-text">ไม้ล้มลุกใบใหญ่หนาที่ทุกคนรู้จักกันดี
-                แม้ถิ่นกำเนิดจะอยู่ไกลถึงฝั่งเมดิเตอร์ เรเนียน และแอฟริกา
-                แต่ในประเทศไทยก็มีการปลูกว่านหางจระเข้อย่างแพร่หลาย
-                ซึ่งในตำรับยาไทยก็ใช้ว่านหางจระเข้บำบัดอาการต่าง ๆ ได้มากมาย
-                จนเป็นที่รู้จักว่า เป็นพืชอัศจรรย์ที่มีสรรพคุณสารพัดประโยชน์ โดย “วุ้นในใบสด”
-                สามารถนำมาบรรเทาอาการปวดศีรษะได้</p>
+            <p class="text-p">มีสรรพคุณแก้ร้อนใน แก้ช้ำใน ได้มีการค้นพบว่ามีสารสำคัญในใบบัวบก
+                ที่มีฤทธิ์ในการลดความดันโลหิตสูงได้
+                โดยช่วยให้การไหลเวียนของหลอดเลือดดำและเส้นเลือดฝอยมีการไหลเวียนดีขึ้น
+                อีกทั้งยังช่วยให้เกิดการขยายตัวของหลอดเลือด</p>
         </div>
     </div>
     <div class=" text-center">
@@ -176,43 +208,50 @@
     </div>
 </section>
 
-<div class="anchor" id="creator"></div>
-<section class="home-section container  text-center mg-bot">
+<section id="creator" class="home-section container  text-center mg-bot">
     <h2 class="home-font">ผู้จัดทำ</h2>
     <br>
     <div class="row">
         <div class="col-md-3 text-center ">
             <div class="animate__animated  animation-element  slide-right animate__delay-0.5s">
 
-                <img src="{{ asset('img/home-1.jpg') }}" class="img-border">
+                <img src="{{ asset('img/sakchan-bg.png') }}" class="img-creator">
                 <br>
-                <span class=" home-name">นายศักดิ์ชาญ มีไชย </span>
+                <span class=" creator-text">นายศักดิ์ชาญ มีไชย </span>
+                <br>
+                <span class="creator-text">Back-End</span>
             </div>
         </div>
         <div class="col-md-3 text-center ">
             <div class="animate__animated  animation-element slide-right animate__delay-0.5s">
 
-                <img src="{{ asset('img/home-1.jpg') }}" class="img-border">
+                <img src="{{ asset('img/phat-bg.png') }}" class="img-creator">
                 <br>
-                <span class=" home-name">นายณพัทร โทวราภา </span>
+                <span class=" creator-text">นายณพัทร โทวราภา </span>
+                <br>
+                <span class="creator-text">Front-End</span>
 
             </div>
         </div>
         <div class="col-md-3 text-center">
             <div class="animate__animated  animation-element slide-right animate__delay-0.5s">
 
-                <img src="{{ asset('img/home-1.jpg') }}" class="img-border">
+                <img src="{{ asset('img/oishi-bg.png') }}" class="img-creator">
                 <br>
-                <span class=" home-name">นายศรัณย์ภัทร์ เปิดชั้น </span>
+                <span class=" creator-text">นายศรัณย์ภัทร์ เปิดชั้น </span>
+                <br>
+                <span class="creator-text">Tester</span>
 
             </div>
         </div>
         <div class="col-md-3 text-center ">
 
             <div class="animate__animated  animation-element slide-right animate__delay-0.5s">
-                <img src="{{ asset('img/home-1.jpg') }}" class="img-border">
+                <img src="{{ asset('img/pud-bg.png') }}" class="img-creator">
                 <br>
-                <span class="home-name">นายกมลวิช สาระคุณ</span>
+                <span class="creator-text">นายกมลวิช สาระคุณ</span>
+                <br>
+                <span class="creator-text">Tester</span>
 
             </div>
         </div>

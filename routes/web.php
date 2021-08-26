@@ -35,11 +35,19 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('herb', function () {
             return view('admin/herb');
         })->name('herb');
+        Route::get('create', function () {
+            return view('admin/create');
+        })->name('create');
+        Route::get('edit', function () {
+            return view('admin/edit');
+        })->name('edit');
+        Route::get('chat', function () {
+            return view('admin/chat');
+        })->name('chat');
 
         //Category
         Route::get('category', 'CategoryController@index')->name('category');
-        Route::post('category/create', 'CategoryController@create')->name('create');
-        Route::get('category/edit/{id}', 'CategoryController@edit');
+        Route::post('category/create', 'CategoryController@create')->name('create-category');
     });
 });
 
