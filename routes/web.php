@@ -49,9 +49,9 @@ Route::group(['prefix' => 'admin'], function () {
         })->name('edit-content');
 
         //Category
-        Route::get('/content', 'CategoryController@index')->name('content');
-        Route::post('/content/create', 'CategoryController@create')->name('create');
-        Route::get('/content/edit/{id}', 'CategoryController@edit');
-        Route::get('/content/delete/{id}', 'CategoryController@delete');
+        Route::get('/content', 'ContentController@index')->name('content');
+        Route::post('/content/create', 'ContentController@create')->name('create');
+        Route::get('/content/edit/{id}', 'ContentController@edit');
+        Route::get('/content/delete/{id}', 'ContentController@delete');
     });
 });

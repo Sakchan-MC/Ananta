@@ -8,11 +8,11 @@
             {{csrf_field()}}
             <div class="form-group">
                 <label for="name">ชื่อ</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{$category->name}}">
+                <input type="text" class="form-control" id="name" name="name" value="{{$content->name}}">
             </div>
             <div class="form-group">
                 <label for="name">เนื้อหา</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{$category->detail}}">
+                <input type="text" class="form-control" id="name" name="name" value="{{$content->detail}}">
             </div>
             <button type="submit" name="submit" class="btn btn-success">Submit</button>
         </form>
