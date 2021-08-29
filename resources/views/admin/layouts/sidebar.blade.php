@@ -40,24 +40,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('edit-content')}}"
-                        class="nav-link {{ (request()->is('admin/edit-content')) ? 'active' : '' }}">
+                    <a href="{{route('content')}}"
+                        class="nav-link {{ (request()->is('admin/content*')) ? 'active' : '' }}">
                         <i class="nav-icon far fa-image"></i>
                         <p class="text-white">
                             แก้ไขข้อมูลหน้าแรก
                         </p>
                     </a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a href="{{route('category')}}"
-                {{ (request()->is('admin/category')) ? 'active' : '' }}
-                class="nav-link ">
-                <i class="nav-icon far fa-image"></i>
-                <p class="text-white">
-                    จัดการประเภท
-                </p>
-                </a>
-                </li> --}}
                 <li class="nav-item">
                     <a href="{{route('chat')}}" class="nav-link {{ (request()->is('admin/chat')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-columns"></i>

@@ -20,8 +20,9 @@ class CategoryController extends Controller
         ]);
         $category = new Category;
         $category->name = $request->name;
+        $category->detail = $request->detail;
         $category->save();
-        return redirect('/admin/category');
+        return redirect('admin/content');
 
         // dd($request);
     }
@@ -30,5 +31,10 @@ class CategoryController extends Controller
     {
         $category = Category::find($category_id);
         return view('admin.category.edit', compact('category'));
+    }
+    public function delete($category_id)
+    {
+        Category::destroy($category_id);
+        return redirect('/admin/content');
     }
 }
