@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container home-section">
-    <h2>สรรพคุณของสมุนไพร</h2>
+    <h2>รายชื่อสมุนไพร</h2>
 
 
 
@@ -303,4 +303,5 @@
         </div>
 </div>
 </section>
+
 @endsection('content')

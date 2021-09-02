@@ -21,7 +21,7 @@
                     <a class="nav-link selector header-font" href="/#creator">ผู้จัดทำ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link selector header-font {{ (request()->is('herb')) ? 'active' : '' }}"
+                    <a class="nav-link selector header-font {{ (request()->is('herbs')) ? 'active' : '' }}"
                         href="/herbs">สมุนไพร</a>
                 </li>
                 <li class="nav-item">

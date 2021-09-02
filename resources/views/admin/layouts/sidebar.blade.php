@@ -1,6 +1,6 @@
 <aside class="main-sidebar green elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="/" class="brand-link">
         <img src="{{ asset('img/ananta.png') }}" alt="Ananta" class="brand-img img-circle elevation-1" height="50px"
             width="50px">
         <span class="brand-text text-white">&nbspAnanta</span>

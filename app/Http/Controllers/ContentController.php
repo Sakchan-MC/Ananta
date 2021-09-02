@@ -30,7 +30,22 @@ class ContentController extends Controller
     public function edit($content_id)
     {
         $content = Content::find($content_id);
+
         return view('admin.category.edit', compact('content'));
+    }
+    public function update(Request $request, $content_id)
+    {
+        Content::updateOrCreate(
+            [
+                'id' => $content_id
+            ],
+            [
+                'name' => $request->name,
+                'detail' => $request->detail,
+            ]
+        );
+
+        return redirect('admin/content');
     }
     public function delete($content_id)
     {

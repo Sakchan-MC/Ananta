@@ -8,4 +8,9 @@ class Content extends Model
 { // protected $table = 'categories';
     // protected $fillable = 'name';
     protected $primaryKey = 'id';
+
+    protected $fillable = [
+        'name',
+        'detail',
+    ];
 }

@@ -20,7 +20,7 @@
     </script>
 
     <!-- Fonts -->
-    
+
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     <!-- Font Awesome -->
@@ -34,12 +34,13 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar">
-    @if(Request::is('login','herb'))
+    @if(Request::is('login','herbs'))
     @include('layouts/header_secondary')
     @else
     @include('layouts/header_main')
     @endif
     @yield('content')
+    @include('layouts/footer')
 </body>
 
 </html>

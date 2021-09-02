@@ -4,7 +4,7 @@
 <div class=" wrapper">
     <div class="table-responsive content-wrapper  table-margin">
         <h2>แก้ไขข้อมูล</h2>
-        <form action="" method="post">
+        <form action="{{ route('update', $content) }}" method="post">
             {{csrf_field()}}
             <div class="form-group">
                 <label for="name">ชื่อ</label>
@@ -12,7 +12,7 @@
             </div>
             <div class="form-group">
                 <label for="name">เนื้อหา</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{$content->detail}}">
+                <input type="text" class="form-control" id="detail" name="detail" value="{{$content->detail}}">
             </div>
             <button type="submit" name="submit" class="btn btn-success">Submit</button>
         </form>

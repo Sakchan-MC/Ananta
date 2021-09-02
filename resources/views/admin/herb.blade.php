@@ -32,7 +32,7 @@
                             จนเป็นที่รู้จักว่า เป็นพืชอัศจรรย์ที่มีสรรพคุณสารพัดประโยชน์ โดย “วุ้นในใบสด”
                             สามารถนำมาบรรเทาอาการปวดศีรษะได้</td>
                         <td class="text-center">
-                            <a href="{{route('edit')}}" class="btn btn-success">Edit</a>
+                            <a href="/admin/edit" class="btn btn-success">Edit</a>
                         </td>
                         <td class="text-center">
                             <a href="" class="btn btn-danger">Delete</a>

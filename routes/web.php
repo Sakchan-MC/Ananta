@@ -51,7 +51,8 @@ Route::group(['prefix' => 'admin'], function () {
         //Category
         Route::get('/content', 'ContentController@index')->name('content');
         Route::post('/content/create', 'ContentController@create')->name('create');
-        Route::get('/content/edit/{id}', 'ContentController@edit');
+        Route::get('/content/edit/{id}', 'ContentController@edit')->name('edit');
+        Route::post('/content/edit/{id}', 'ContentController@update')->name('update');
         Route::get('/content/delete/{id}', 'ContentController@delete');
     });
 });
