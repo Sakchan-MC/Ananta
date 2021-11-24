@@ -14,9 +14,6 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <script src="{{ asset('js/user.js') }}" defer></script>
-    <script>
-        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-    </script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

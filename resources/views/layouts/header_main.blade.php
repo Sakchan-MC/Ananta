@@ -32,7 +32,7 @@
                     @endguest
                     @auth
                     @if (request()->user()->isAdmin())
-                    {{route('admin')}} 
+                    {{route('admin')}}
                     @else
                     home
                     @endif

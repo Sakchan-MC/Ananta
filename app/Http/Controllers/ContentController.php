@@ -8,10 +8,15 @@ use Illuminate\Support\Facades\Redirect;
 
 class ContentController extends Controller
 {
+
     public function index()
     {
         $content = Content::all();
-        return view('admin.category.index', compact('content'));
+        return view('admin.contents.content', compact('content'));
+    }
+    public function add()
+    {
+        return view('admin/contents/add');
     }
     public function create(Request $request)
     {
@@ -22,7 +27,7 @@ class ContentController extends Controller
         $content->name = $request->name;
         $content->detail = $request->detail;
         $content->save();
-        return redirect('admin/content');
+        return redirect()->route('content');
 
         // dd($request);
     }
@@ -31,7 +36,7 @@ class ContentController extends Controller
     {
         $content = Content::find($content_id);
 
-        return view('admin.category.edit', compact('content'));
+        return view('admin.contents.edit', compact('content'));
     }
     public function update(Request $request, $content_id)
     {
@@ -45,11 +50,11 @@ class ContentController extends Controller
             ]
         );
 
-        return redirect('admin/content');
+        return redirect()->route('content');
     }
     public function delete($content_id)
     {
         Content::destroy($content_id);
-        return redirect('/admin/content');
+        return redirect()->route('content');
     }
 }

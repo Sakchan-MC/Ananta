@@ -47,6 +47,19 @@ class HerbController extends Controller
     }
     public function update(Request $request, $herb_id)
     {
+        $herb = Herb::find($herb_id);
+        $filename = $herb->image;
+        File::delete(public_path() . '/admin/images/herbs/' . $filename);
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $fileName = Str::random(10) . '.' . $request->file('image')->getClientOriginalExtension();
+            $destinationPath = public_path() . '/admin/images/herbs';
+            $file->move($destinationPath, $fileName);
+            Image::make(public_path() . '/admin/images/herbs/' . $fileName);
+            $new = $fileName;
+        } else {
+            $new = 'default.png';
+        };
         Herb::updateOrCreate(
             [
                 'id' => $herb_id
@@ -54,6 +67,7 @@ class HerbController extends Controller
             [
                 'name' => $request->name,
                 'description' => $request->description,
+                'image' => $new
             ]
         );
 

@@ -4,7 +4,6 @@
 
 <div class="wrapper">
     <div class="content-wrapper">
-
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
@@ -14,7 +13,7 @@
                         <!-- small box -->
                         <div class="small-box bg-info">
                             <div class="inner">
-                                <h3>57</h3>
+                                <h3>{{ $herbs->count() }}</h3>
 
                                 <p>สมุนไพรที่มีอยู่</p>
                             </div>
@@ -31,7 +30,7 @@
                             <div class="inner">
                                 <h3>1</h3>
 
-                                <p>ข้อความใหม่</p>
+                                <p>ทดสอบ</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-stats-bars"></i>
@@ -44,7 +43,7 @@
                         <!-- small box -->
                         <div class="small-box bg-warning">
                             <div class="inner">
-                                <h3>50</h3>
+                                <h3>{{ $users->count() }}</h3>
 
                                 <p>ผู้ใช้ทั้งหมด</p>
                             </div>
@@ -97,7 +96,7 @@
                         </div>
                 </div>
                 <?php
- 
+
 $dataPoints = array(
 	array("y" => 10, "label" => date('d.m.Y',strtotime("-6 days"))),
 	array("y" => 15, "label" => date('d.m.Y',strtotime("-5 days"))),
@@ -107,11 +106,11 @@ $dataPoints = array(
 	array("y" => 44, "label" => date('d.m.Y',strtotime("-1 days"))),
 	array("y" => 50, "label" => date('d.m.Y',strtotime("0 days")))
 );
- 
+
 ?>
                 <script>
                     window.onload = function () {
- 
+
 var chart = new CanvasJS.Chart("chartContainer", {
 	title: {
 		text: "จำนวนผู้ใช้"
@@ -125,7 +124,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	}]
 });
 chart.render();
- 
+
 }
                 </script>
                 <div id="chartContainer" style="height: 370px; width: 100%;"></div>

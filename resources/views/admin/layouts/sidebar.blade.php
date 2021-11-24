@@ -8,15 +8,6 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="info ">
-                <a class="d-block text-white">
-                    ชื่อผู้ใช้ : {{Auth::user()->name}}
-                </a>
-            </div>
-        </div>
-
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -32,7 +23,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('herb')}}" class="nav-link {{ (request()->is('admin/herb')) ? 'active' : '' }}">
+                    <a href="{{route('herb')}}" class="nav-link {{ (request()->is('admin/herbs/*')) ? 'active' : '' }}">
                         <i class="nav-icon far fa-image"></i>
                         <p class="text-white">
                             จัดการสมุนไพร
@@ -41,7 +32,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{route('content')}}"
-                        class="nav-link {{ (request()->is('admin/content*')) ? 'active' : '' }}">
+                        class="nav-link {{ (request()->is('admin/contents*')) ? 'active' : '' }}">
                         <i class="nav-icon far fa-image"></i>
                         <p class="text-white">
                             แก้ไขข้อมูลหน้าแรก
@@ -49,10 +40,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('chat')}}" class="nav-link {{ (request()->is('admin/chat')) ? 'active' : '' }}">
+                    <a href="{{route('background')}}"
+                        class="nav-link {{ (request()->is('admin/backgrounds/*')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-columns"></i>
                         <p class="text-white">
-                            กล่องข้อความ
+                            ภาพพื้นหลังหน้าแรก
                         </p>
                     </a>
                 </li>

@@ -26,39 +26,46 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', 'HomeController@index')->name('home');
 });
+
 //Route for admin
 Route::group(['prefix' => 'admin'], function () {
+
     Route::group(['middleware' => ['admin']], function () {
-        Route::get('dashboard', 'admin\AdminController@index')->name('admin');
+        Route::get('/dashboard', 'admin\AdminController@index')->name('admin');
 
         //herb
         Route::group(['prefix' => 'herbs'], function () {
             Route::get('/', 'HerbController@index')->name('herb');
             Route::get('add', 'HerbController@add')->name('add-herb');
             Route::post('create', 'HerbController@create')->name('create-herb');
+            Route::post('edit/{id}', 'HerbController@update')->name('update-herb');
             Route::get('edit/{id}', 'HerbController@edit')->name('edit-herb');
             Route::get('delete/{id}', 'HerbController@delete');
         });
 
 
-        Route::get('create', function () {
-            return view('admin/create');
-        })->name('create');
-        Route::get('edit', function () {
-            return view('admin/edit');
-        })->name('edit');
+        //Content
+        Route::group(['prefix' => 'contents'], function () {
+            Route::get('/', 'ContentController@index')->name('content');
+            Route::get('add', 'ContentController@add')->name('add-content');
+            Route::post('create', 'ContentController@create')->name('create-content');
+            Route::get('edit/{id}', 'ContentController@edit')->name('edit-content');
+            Route::post('edit/{id}', 'ContentController@update')->name('update-content');
+            Route::get('delete/{id}', 'ContentController@delete');
+        });
+        //Background
+        Route::group(['prefix' => 'backgrounds'], function () {
+            Route::get('/*', 'BackgroundController@index')->name('background');
+            Route::get('add', 'BackgroundController@add')->name('add-background');
+            Route::post('create', 'BackgroundController@create')->name('create-background');
+            Route::get('edit/{id}', 'BackgroundController@edit')->name('edit-background');
+            Route::post('edit/{id}', 'BackgroundController@update')->name('update-background');
+            Route::get('delete/{id}', 'BackgroundController@delete');
+        });
+
+
         Route::get('chat', function () {
             return view('admin/chat');
         })->name('chat');
-        Route::get('edit-content', function () {
-            return view('admin/edit-content');
-        })->name('edit-content');
-
-        //Category
-        Route::get('/content', 'ContentController@index')->name('content');
-        Route::post('/content/create', 'ContentController@create')->name('create');
-        Route::get('/content/edit/{id}', 'ContentController@edit')->name('edit');
-        Route::post('/content/edit/{id}', 'ContentController@update')->name('update');
-        Route::get('/content/delete/{id}', 'ContentController@delete');
     });
 });
