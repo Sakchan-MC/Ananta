@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
+use App\Herb;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
@@ -28,5 +30,10 @@ class HomeController extends Controller
         } else {
             return view('home');
         }
+    }
+    public function herbs()
+    {
+        $herb = Herb::all();
+        return view('herbs', compact('herb'));
     }
 }

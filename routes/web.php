@@ -17,9 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/herbs', function () {
-    return view('herb');
-});
+Route::get('/herbs', 'HomeController@herbs');
 
 
 Auth::routes();
@@ -32,9 +30,17 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['middleware' => ['admin']], function () {
         Route::get('dashboard', 'admin\AdminController@index')->name('admin');
-        Route::get('herb', function () {
-            return view('admin/herb');
-        })->name('herb');
+
+        //herb
+        Route::group(['prefix' => 'herbs'], function () {
+            Route::get('/', 'HerbController@index')->name('herb');
+            Route::get('add', 'HerbController@add')->name('add-herb');
+            Route::post('create', 'HerbController@create')->name('create-herb');
+            Route::get('edit/{id}', 'HerbController@edit')->name('edit-herb');
+            Route::get('delete/{id}', 'HerbController@delete');
+        });
+
+
         Route::get('create', function () {
             return view('admin/create');
         })->name('create');
