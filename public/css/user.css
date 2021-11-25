@@ -673,3 +673,7 @@ body {
         z-index: 1;
     }
 }
+.background-img{
+    width: 500px;
+    height: 100%;
+}
