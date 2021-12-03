@@ -27,7 +27,8 @@
                         <td class="col-md-3"><img src="{{ asset('admin/images/herbs/' . $herb->image) }}" /></td>
                         <td class="col-md-3">
                             <a href="{{url('/admin/herbs/edit/'.$herb->id)}}" class="btn btn-success">แก้ไข</a>
-                            <a href="{{url('/admin/herbs/delete/'.$herb->id)}}" class="btn btn-danger">ลบ</a>
+                            <a href="#" onclick="deleteConfirm('{{$herb->id}}') " class="btn btn-danger">ลบ</a>
+                            {{-- <a href="{{url('/admin/herbs/delete/'.$herb->id)}}" class="btn btn-danger">ลบ</a> --}}
                         </td>
                     </tr>
                     @endforeach
