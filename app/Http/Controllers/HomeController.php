@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
+use Illuminate\Http\Request;
+use App\User;
 use App\Herb;
 use App\Http\Controllers\Controller;
 
@@ -31,9 +32,23 @@ class HomeController extends Controller
             return view('home');
         }
     }
-    public function herbs()
+
+    public function profile()
     {
-        $herb = Herb::all();
-        return view('herbs', compact('herb'));
+        $user = User::find(auth()->user()->id);
+        return view('home', compact('user'));
+    }
+    public function update(Request $request, $user_id)
+    {
+        User::updateOrCreate(
+            [
+                'id' => $user_id
+            ],
+            [
+                'name' => $request->name,
+            ]
+        );
+
+        return redirect()->route('home');
     }
 }

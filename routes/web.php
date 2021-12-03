@@ -13,18 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::guest();
+
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/herbs', 'HomeController@herbs');
+Route::get('/herbs', 'GuestController@herbs')->name('herbs');
 
 
 Auth::routes();
 
 //Route for normal user
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', 'HomeController@profile')->name('home');
+    Route::post('/home/update/{id}', 'HomeController@update')->name('update-profile');
 });
 
 //Route for admin

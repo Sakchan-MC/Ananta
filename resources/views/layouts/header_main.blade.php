@@ -13,7 +13,7 @@
                     <a class="nav-link selector header-font" href="#home">หน้าแรก</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link selector header-font" href="#herbs">สรรพคุณของสมุนไพร</a>
+                    <a class="nav-link selector header-font" href="#herb">สรรพคุณของสมุนไพร</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link selector header-font" href="#contact">ติดต่อ</a>
@@ -22,11 +22,11 @@
                     <a class="nav-link selector header-font" href="#creator">ผู้จัดทำ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link selector header-font{{ (request()->is('herb')) ? 'active' : '' }}"
-                        href="/herbs">สมุนไพร</a>
+                    <a class="nav-link selector header-font {{ Request::is('herbs*') ? 'active' : '' }}"
+                        href="{{route('herbs')}}">สมุนไพร</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link selector header-font {{ (request()->is('login')) ? 'active' : '' }}" href="
+                    <a class="nav-link selector header-font {{ (request()->is('login','home')) ? 'active' : '' }}" href="
                     @guest
                     {{route('login')}}
                     @endguest
@@ -46,7 +46,7 @@
                         จัดการข้อมูล
 
                         @else
-                        แชท
+                        ข้อมูลผู้ใช้
 
                         @endif
                         @endauth

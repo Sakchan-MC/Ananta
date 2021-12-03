@@ -1,4 +1,5 @@
-<nav id="navbar" class="navbar navbar-expand-lg navbar-dark green fixed-top ">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark green fixed-top "
+    data-navbar-on-scroll="data-navbar-on-scroll">
     <div class="container">
         <a class="navbar-brand selector header-font " href="/"><img class="selector brand-img img-circle elevation-1"
                 src="{{ asset('img/ananta.png') }}" />&nbspAnanta</a>
@@ -21,12 +22,25 @@
                     <a class="nav-link selector header-font" href="/#creator">ผู้จัดทำ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link selector header-font {{ (request()->is('herbs')) ? 'active' : '' }}"
-                        href="/herbs">สมุนไพร</a>
+                    <a class="nav-link selector header-font {{ Request::is('herbs*') ? 'active' : '' }}"
+                        href="{{route('herbs')}}">สมุนไพร</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link selector  header-font {{ (request()->is('login')) ? 'login-font' : '' }}"
-                        href="/login">ลงชื่อเข้าใช้</a>
+                    <a class="nav-link selector  header-font {{ Request::is('home*','login') ? 'active' : ''  }}"
+                        href="
+                        @guest
+                        {{route('login')}}
+                        @endguest
+                        @auth
+                        {{route('home')}}
+                        @endauth">
+                        @guest
+                        ลงชื่อเข้าใช้
+                        @endguest
+                        @auth
+                        ข้อมูลผู้ใช้
+                        @endauth
+                    </a>
                 </li>
             </ul>
         </div>

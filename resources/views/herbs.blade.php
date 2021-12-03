@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<span class="anchor" id="herb"></span>
 
 <div class="container home-section">
     <h2>รายชื่อสมุนไพร</h2>

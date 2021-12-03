@@ -13,7 +13,6 @@
                         <!-- small box -->
                         <div class="small-box bg-info">
                             <div class="inner">
-                                <h3>{{ $herbs->count() }}</h3>
 
                                 <p>สมุนไพรที่มีอยู่</p>
                             </div>
@@ -43,7 +42,6 @@
                         <!-- small box -->
                         <div class="small-box bg-warning">
                             <div class="inner">
-                                <h3>{{ $users->count() }}</h3>
 
                                 <p>ผู้ใช้ทั้งหมด</p>
                             </div>

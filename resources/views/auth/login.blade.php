@@ -97,7 +97,8 @@
                             <a href="{{ route('password.request') }}">
                                 ลืมรหัสผ่าน
                             </a>
-                            @endif</p>
+                            @endif
+                        </p>
                         <button type="submit" class="btn btn-lg"> เข้าสู่ระบบ</button>
                     </form>
                 </div>

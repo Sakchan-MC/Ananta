@@ -112,7 +112,7 @@
     </div>
 </section>
 <section class="home-section container">
-    <span class="anchor" id="herbs"></span>
+    <span class="anchor" id="herb"></span>
 
     <h2 class="text-center home-font">ตัวอย่างสมุนไพร</h2>
     <br>

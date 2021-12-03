@@ -31,7 +31,7 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar">
-    @if(Request::is('login','herbs'))
+    @if(Request::is('login','herbs','home'))
     @include('layouts/header_secondary')
     @else
     @include('layouts/header_main')
