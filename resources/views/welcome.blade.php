@@ -2,17 +2,25 @@
 @section('content')
 {{-- Home --}}
 <span class="anchor" id="home"></span>
-
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         @foreach ($background as $background)
         @if ($loop->first)
+<<<<<<< HEAD
         <div class="carousel-item active"  data-bs-interval="3000">
             <img src="{{ asset('admin/images/backgrounds/' . $background->image) }}" class="img-top selector">
         </div>
         @else
         <div class="carousel-item" data-bs-interval="2500">
             <img src=" {{ asset('admin/images/backgrounds/' . $background->image) }}" class="img-top selector">
+=======
+        <div class="carousel-item active">
+            <img src="{{ asset('admin/images/backgrounds/' . $background->image) }}" class="img-top selector">
+        </div>
+        @else
+        <div class="carousel-item">
+            <img src="{{ asset('admin/images/backgrounds/' . $background->image) }}" class="img-top selector">
+>>>>>>> f751e38cdcd464d5e4e0a666b68f77092f0656e2
         </div>
         @endif
 

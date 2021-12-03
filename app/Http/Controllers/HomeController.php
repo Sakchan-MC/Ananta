@@ -1,9 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+<<<<<<< HEAD
 use App\Background;
+=======
+
+<<<<<<< HEAD
+>>>>>>> f751e38cdcd464d5e4e0a666b68f77092f0656e2
 use Illuminate\Http\Request;
 use App\User;
+=======
+use App\Background;
+>>>>>>> 179efca7ab08fa0d84f208b3efd4bd69c53e2275
 use App\Herb;
 use App\Http\Controllers\Controller;
 
