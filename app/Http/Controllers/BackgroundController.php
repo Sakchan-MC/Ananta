@@ -50,16 +50,18 @@ class BackgroundController extends Controller
         $background = Background::find($background_id);
 
         if ($request->hasFile('image')) {
+            $background = Background::find($background_id);
             $filename = $background->image;
             File::delete(public_path() . '/admin/images/backgrounds/' . $filename);
+
             $file = $request->file('image');
-            $fileName = Str::random(10) . '.' . $request->file('image')->getClientOriginalExtension();
+            $fileName = $background->image;
             $destinationPath = public_path() . '/admin/images/backgrounds';
             $file->move($destinationPath, $fileName);
             Image::make(public_path() . '/admin/images/backgrounds/' . $fileName);
-            $new = $fileName;
+            $background->image = $fileName;
         } else {
-            $new = $background->image;;
+            $new = $background->image;
         };
         Background::updateOrCreate(
             [

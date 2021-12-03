@@ -26,7 +26,7 @@
                         <td class="col-3">{{$content->detail}}</td>
                         <td class="col-3">
                             <a href="{{url('/admin/contents/edit/'.$content->id)}}" class="btn btn-success">แก้ไข</a>
-                            <a href="{{url('/admin/contents/delete/'.$content->id)}}" class="btn btn-danger">ลบ</a>
+                            <a href="#" onclick="deleteConfirm('{{$content->id}}','contents') " class="btn btn-danger">ลบ</a>
                         </td>
 
                     </tr>

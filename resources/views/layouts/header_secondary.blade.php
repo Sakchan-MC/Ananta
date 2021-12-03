@@ -26,20 +26,23 @@
                         href="{{route('herbs')}}">สมุนไพร</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link selector  header-font {{ Request::is('home*','login') ? 'active' : ''  }}"
-                        href="
+                    <a class="nav-link selector  header-font {{ Request::is('home*','login') ? 'active' : ''  }}" href="
                         @guest
                         {{route('login')}}
                         @endguest
-                        @auth
+                        @if (auth()->user()->isAdmin())
+                        {{route('admin')}}
+                        @else
                         {{route('home')}}
-                        @endauth">
+                        @endif">
                         @guest
                         ลงชื่อเข้าใช้
                         @endguest
-                        @auth
+                        @if (auth()->user()->isAdmin())
+                        จัดการข้อมูล
+                        @else
                         ข้อมูลผู้ใช้
-                        @endauth
+                        @endif
                     </a>
                 </li>
             </ul>

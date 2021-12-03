@@ -2,7 +2,7 @@
 @section('content')
 
 <div class=" wrapper container-fluid">
-    <div class="table-responsive content-wrapper table-margin ">
+    <div class="table-responsive content-wrapper table-margin">
         <h2>เพิ่มสมุนไพร</h2>
         <form action="{{route('create-herb')}}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
@@ -18,7 +18,7 @@
             <div class="form-group">
                 <label for="picture">รูปภาพ</label>
                 <br>
-                <input type="file" name="image" id="image">
+                <input class="form-control form-control-lg" id="image" name="image" type="file">
             </div>
             <button type="submit" name="submit" class="btn btn-success">เพิ่มข้อมูล</button>
         </form>

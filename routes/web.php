@@ -56,8 +56,8 @@ Route::group(['prefix' => 'admin'], function () {
             Route::get('delete/{id}', 'ContentController@delete');
         });
         //Background
-        Route::group(['prefix' => 'backgrounds'], function () {
-            Route::get('/*', 'BackgroundController@index')->name('background');
+        Route::group(['prefix' => 'background'], function () {
+            Route::get('/', 'BackgroundController@index')->name('background');
             Route::get('add', 'BackgroundController@add')->name('add-background');
             Route::post('create', 'BackgroundController@create')->name('create-background');
             Route::get('edit/{id}', 'BackgroundController@edit')->name('edit-background');

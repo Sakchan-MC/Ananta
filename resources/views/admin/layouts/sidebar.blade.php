@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('herb')}}" class="nav-link {{ (request()->is('admin/herbs/*')) ? 'active' : '' }}">
+                    <a href="{{route('herb')}}" class="nav-link {{ (request()->is('admin/herbs*')) ? 'active' : '' }}">
                         <i class="nav-icon far fa-image"></i>
                         <p class="text-white">
                             จัดการสมุนไพร
@@ -41,7 +41,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{route('background')}}"
-                        class="nav-link {{ (request()->is('admin/backgrounds/*')) ? 'active' : '' }}">
+                        class="nav-link {{ (request()->is('admin/backgrounds*')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-columns"></i>
                         <p class="text-white">
                             ภาพพื้นหลังหน้าแรก
