@@ -672,6 +672,7 @@ body {
         z-index: 1;
     }
 }
+<<<<<<< HEAD
 
 .profile-border {
     width: 250px;
@@ -681,4 +682,9 @@ body {
 
 .user-name {
     width: 300px !important;
+=======
+.background-img{
+    width: 500px;
+    height: 100%;
+>>>>>>> 179efca7ab08fa0d84f208b3efd4bd69c53e2275
 }

@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use Illuminate\Http\Request;
 use App\User;
+=======
+use App\Background;
+>>>>>>> 179efca7ab08fa0d84f208b3efd4bd69c53e2275
 use App\Herb;
 use App\Http\Controllers\Controller;
 
@@ -50,5 +54,10 @@ class HomeController extends Controller
         );
 
         return redirect()->route('home');
+    }
+    public function background()
+    {
+        $background = Background::where("status", 1)->get();
+        return view('welcome', compact('background'));
     }
 }
