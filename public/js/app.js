@@ -4977,7 +4977,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-window.deleteConfirm = function (formId) {
+window.deleteConfirm = function (id) {
   sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
     icon: 'warning',
     text: 'Do you want to delete this?',
@@ -4986,7 +4986,7 @@ window.deleteConfirm = function (formId) {
     confirmButtonColor: '#e3342f'
   }).then(function (result) {
     if (result.isConfirmed) {
-      document.getElementById(formId).submit();
+      window.location.href = "/admin/herbs/delete/" + id;
     }
   });
 };

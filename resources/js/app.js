@@ -1,7 +1,7 @@
 require('./bootstrap');
 import Swal from 'sweetalert2';
 
-window.deleteConfirm = function (formId) {
+window.deleteConfirm = function (id) {
     Swal.fire({
         icon: 'warning',
         text: 'Do you want to delete this?',
@@ -10,7 +10,7 @@ window.deleteConfirm = function (formId) {
         confirmButtonColor: '#e3342f',
     }).then((result) => {
         if (result.isConfirmed) {
-            document.getElementById(formId).submit();
+            window.location.href = "/admin/herbs/delete/" + id;
         }
     });
 }
