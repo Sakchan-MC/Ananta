@@ -5,15 +5,19 @@
 
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="5000">
-            <img src="{{ asset('img/home-bg-1.jpg')}}" class="img-top selector">
+        @foreach ($background as $background)
+        @if ($loop->first)
+        <div class="carousel-item active"  data-bs-interval="3000">
+            <img src="{{ asset('admin/images/backgrounds/' . $background->image) }}" class="img-top selector">
         </div>
-        <div class="carousel-item" data-bs-interval="7000">
-            <img src="{{ asset('img/home-bg-2.jpg')}}" class="img-top selector">
+        @else
+        <div class="carousel-item" data-bs-interval="2500">
+            <img src=" {{ asset('admin/images/backgrounds/' . $background->image) }}" class="img-top selector">
         </div>
-        <div class="carousel-item">
-            <img src="{{ asset('img/home-bg-4.jpg')}}" class="img-top selector">
-        </div>
+        @endif
+
+        @endforeach
+
     </div>
 </div>
 <div class="bg-header-text fixed-text">
@@ -88,7 +92,8 @@
                 สามารถนำมาใช้เป็นยารักษาโรคต่างๆ และบำรุงร่างกายได้ ประเภทของสมุนไพร
                 สมุนไพรที่ได้จากส่วนของพืชโดยตรง <br>(พืชวัตถุ) โดยส่วนต่างๆ ที่นำมานั้นมีสารที่สามารถใช้เป็นยาได้
                 ได้แก่ ใบ ดอก ผล เปลือกผล เมล็ด เป็นต้น
-                สมุนไพรที่ได้จากอวัยวะของสัตว์ (สัตว์วัตถุ) ได้แก่ ตับ ดี นอ เขา เอ็น เลือด น้ำมัน มูล ฯลฯ เช่น ขี้ผึ้ง
+                สมุนไพรที่ได้จากอวัยวะของสัตว์ (สัตว์วัตถุ) ได้แก่ ตับ ดี นอ เขา เอ็น เลือด น้ำมัน มูล ฯลฯ เช่น
+                ขี้ผึ้ง
                 รังนก
                 น้ำมันตับปลา สมุนไพรที่ได้จากแร่โดยธรรมชาติหรือสิ่งที่ประกอบขึ้นจากแร่ธาตุต่างๆ ตามกรรมวิธี
                 (ธาตุวัตถุ) นำมาใช้เป็นยา เช่น เกลือ กำมะถัน น้ำประสานทอง ดีเกลือ สารส้ม
@@ -142,7 +147,8 @@
                 หรือทำเป็นยาทานวดก็ได้ และยังใช้รวมกับสมุนไพรชนิดอื่นรักษาโรคได้ เช่น บำรุงธาตุ
                 เจริญอาหาร และขับเหงื่อหัว เป็นยารักษาเกลื้อน แก้ท้องอืดท้องเฟ้อ แก้อาการขัดเบา ใบสด ๆ
                 จะช่วยลดความดันโลหิตสูง แก้ไข้ราก ใช้เป็นยาแก้ไข้เหนือ ปวดท้องและท้องเสียต้นใช้เป็นยาแก้ขับลม
-                แก้เบื่ออาหาร แก้ผมแตก แก้โรคทางเดินปัสสาวะ นิ่ว เป็นยาบำรุงไฟธาตุให้เจริญแต่ถ้าเอาผสมกับสมุนไพรชนิดอื่น
+                แก้เบื่ออาหาร แก้ผมแตก แก้โรคทางเดินปัสสาวะ นิ่ว
+                เป็นยาบำรุงไฟธาตุให้เจริญแต่ถ้าเอาผสมกับสมุนไพรชนิดอื่น
                 จะแก้โรคหนองใน และนอกจากนี้ยังใช้ดับกลิ่นคาวด้วย</p>
         </div>
     </div>

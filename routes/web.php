@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::guest();
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@background');
 Route::get('/herbs', 'GuestController@herbs')->name('herbs');
 
 
