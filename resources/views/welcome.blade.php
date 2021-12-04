@@ -121,7 +121,6 @@
 
     <h2 class="text-center home-font">ตัวอย่างสมุนไพร</h2>
     <br>
-    @if
     @for ($i = 0; $i < 3; $i++) <div class=" row justify-content-between  align-items-center">
         <div class="col-md  text-center">
             <img src="{{ asset('admin/images/herbs/' . $herb[$i]->image) }}" style="width:200px;height:200px;">
@@ -136,7 +135,6 @@
         <br>
 
         @endfor
-
 
 
 
