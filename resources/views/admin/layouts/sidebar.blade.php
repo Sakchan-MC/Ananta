@@ -41,10 +41,19 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{route('background')}}"
-                        class="nav-link {{ (request()->is('admin/backgrounds*')) ? 'active' : '' }}">
+                        class="nav-link {{ (request()->is('admin/background*')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-columns"></i>
                         <p class="text-white">
                             ภาพพื้นหลังหน้าแรก
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('user')}}"
+                        class="nav-link {{ (request()->is('admin/users*')) ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-columns"></i>
+                        <p class="text-white">
+                            จัดการผู้ใช้งาน
                         </p>
                     </a>
                 </li>

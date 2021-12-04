@@ -7,11 +7,11 @@
     <div class="carousel-inner">
         @foreach ($background as $background)
         @if ($loop->first)
-        <div class="carousel-item active"  data-bs-interval="3000">
+        <div class="carousel-item active" data-bs-interval="3000">
             <img src="{{ asset('admin/images/backgrounds/' . $background->image) }}" class="img-top selector">
         </div>
         @else
-        <div class="carousel-item" data-bs-interval="2500">
+        <div class="carousel-item" data-bs-interval="4000">
             <img src=" {{ asset('admin/images/backgrounds/' . $background->image) }}" class="img-top selector">
         </div>
         @endif
@@ -117,58 +117,32 @@
     </div>
 </section>
 <section class="home-section container">
-    <span class="anchor" id="herb"></span>
+    <span class="anchor" id="herbs"></span>
 
     <h2 class="text-center home-font">ตัวอย่างสมุนไพร</h2>
     <br>
-    <div class=" row justify-content-between  align-items-center">
+    @if
+    @for ($i = 0; $i < 3; $i++) <div class=" row justify-content-between  align-items-center">
         <div class="col-md  text-center">
-            <img src="{{ asset('img/herbs/Thai_cardamom.jpg') }}" class="img-border">
-        </div>
-        <div class="col-md">
-            <span class="home-font ">กระวานไทย</span>
-            <br>
-            <p class="text-p">ผลแก่ รสเผ็ดร้อน กลิ่นหอม ใช้แก้อาหารท้องอืด ท้องเฟ้อช่วยขับลม และแก้แน่นจุกเสียด
-                มีฤทธิ์ขับลม และบำรุงธาตุ แก้ธาตุไม่ปกติ บำรุงกำลังขับโลหิต แก้ลมในอกให้ปิดธาตุ
-                แก้ลมเสมหะให้ปิดธาตุแก้ลมในลำไส้
-                เจริญอาหารรักษาโรครำมะนาด แก้ลมสันนิบาต แก้สะอึก แก้อัมพาตรักษาอาการเบื่ออาหาร
-                คลื่นไส้อาเจียน เมล็ด แก้ธาตุพิการ อุจจาระพิการ บำรุงธาตุ ขับเสมหะแก้ปวดท้อง ขับลม</p>
-        </div>
-    </div>
-    <br>
-    <div class=" row justify-content-between  align-items-center">
-        <div class="col-md  text-center">
-            <img src="{{ asset('img/herbs/lemon_grass.jpg') }}" class="img-border">
+            <img src="{{ asset('admin/images/herbs/' . $herb[$i]->image) }}" style="width:200px;height:200px;">
         </div>
         <div class="col-md ">
-            <span class="home-font ">ตะไคร้</span>
-            <br>
-            <p class="text-p">ทั้งต้น ใช้เป็นยารักษาโรคหืด แก้ปวดท้อง ขับปัสสาวะและแก้อหิวาตกโรค
-                หรือทำเป็นยาทานวดก็ได้ และยังใช้รวมกับสมุนไพรชนิดอื่นรักษาโรคได้ เช่น บำรุงธาตุ
-                เจริญอาหาร และขับเหงื่อหัว เป็นยารักษาเกลื้อน แก้ท้องอืดท้องเฟ้อ แก้อาการขัดเบา ใบสด ๆ
-                จะช่วยลดความดันโลหิตสูง แก้ไข้ราก ใช้เป็นยาแก้ไข้เหนือ ปวดท้องและท้องเสียต้นใช้เป็นยาแก้ขับลม
-                แก้เบื่ออาหาร แก้ผมแตก แก้โรคทางเดินปัสสาวะ นิ่ว
-                เป็นยาบำรุงไฟธาตุให้เจริญแต่ถ้าเอาผสมกับสมุนไพรชนิดอื่น
-                จะแก้โรคหนองใน และนอกจากนี้ยังใช้ดับกลิ่นคาวด้วย</p>
+            <span class="home-font ">{{$herb[$i]->name}}</span><br>
+
+            <span class="text-p">{{$herb[$i]->description}}</span>
         </div>
-    </div>
-    <br>
-    <div class=" row justify-content-between  align-items-center">
-        <div class="col-md  text-center">
-            <img src="{{ asset('img/gotukola.jpg') }}" class="img-border">
+
         </div>
-        <div class="col-md">
-            <span class="home-font ">บัวบก</span>
-            <br>
-            <p class="text-p">มีสรรพคุณแก้ร้อนใน แก้ช้ำใน ได้มีการค้นพบว่ามีสารสำคัญในใบบัวบก
-                ที่มีฤทธิ์ในการลดความดันโลหิตสูงได้
-                โดยช่วยให้การไหลเวียนของหลอดเลือดดำและเส้นเลือดฝอยมีการไหลเวียนดีขึ้น
-                อีกทั้งยังช่วยให้เกิดการขยายตัวของหลอดเลือด</p>
+        <br>
+
+        @endfor
+
+
+
+
+        <div class=" text-center">
+            <a href="/herbs" class="btn btn-primary btn-text mt-5">ข้อมูลเพิ่มเติม</a>
         </div>
-    </div>
-    <div class=" text-center">
-        <a href="/herbs" class="btn btn-primary btn-text mt-5">ข้อมูลเพิ่มเติม</a>
-    </div>
 </section>
 
 

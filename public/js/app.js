@@ -5178,6 +5178,52 @@ window.editimg = function (id) {
   }))();
 };
 
+window.userstatus0 = function (id, name) {
+  var formData = new FormData();
+  sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+    title: 'ต้องการทำให้ผู้ใช้ ' + name + ' เป็น Admin หรือไม่?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'ตกลง',
+    cancelButtonText: 'ยกเลิก'
+  }).then(function (result) {
+    if (result.isConfirmed) {
+      formData.append("type", 1);
+      formData.append("_token", $('meta[name="csrf-token"]').attr('content'));
+      var request = new XMLHttpRequest();
+      request.open("POST", "users/edit/" + id);
+      request.send(formData);
+      window.location = window.location + '#loaded';
+      window.location.reload();
+    }
+  });
+};
+
+window.userstatus1 = function (id, name) {
+  var formData = new FormData();
+  sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+    title: 'ต้องการทำให้ผู้ใช้ ' + name + ' เป็น User หรือไม่?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'ตกลง',
+    cancelButtonText: 'ยกเลิก'
+  }).then(function (result) {
+    if (result.isConfirmed) {
+      formData.append("type", 0);
+      formData.append("_token", $('meta[name="csrf-token"]').attr('content'));
+      var request = new XMLHttpRequest();
+      request.open("POST", "users/edit/" + id);
+      request.send(formData);
+      window.location = window.location + '#loaded';
+      window.location.reload();
+    }
+  });
+};
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

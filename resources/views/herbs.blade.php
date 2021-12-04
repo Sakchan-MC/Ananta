@@ -4,7 +4,7 @@
 
 <div class="container home-section">
     <h2>รายชื่อสมุนไพร</h2>
-    @foreach ($herb as $herb)
+    @foreach ($herbs as $herb)
 
     <div class="row border-herb">
         <div class="col-3">
