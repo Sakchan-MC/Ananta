@@ -13,16 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
 Auth::guest();
 
 Route::get('/', 'GuestController@background');
 Route::get('/herbs', 'GuestController@herbs')->name('herbs');
-=======
-Route::get('/', 'HomeController@background');
-
-Route::get('/herbs', 'HomeController@herbs');
->>>>>>> 179efca7ab08fa0d84f208b3efd4bd69c53e2275
 
 
 Auth::routes();
