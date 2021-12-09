@@ -4,9 +4,9 @@
 
 <div class="wrapper">
     <div class="content-wrapper">
-        <p>ยินดีต้อนรับ</p>
-        <p>เข้าสู่ระบบจัดการของ"คลินิกสมุนไพรทางเลือก"</p>
-        <div class="row">
+        <p class="home-font text-center">ยินดีต้อนรับ</p>
+        <p class="text-center btn-text">เข้าสู่ระบบจัดการของ"คลินิกสมุนไพรทางเลือก"</p>
+        <div class="row justify-content-center ">
             <div class="col-lg-3 col-6">
                 <!-- small box -->
                 <div class="small-box bg-info">

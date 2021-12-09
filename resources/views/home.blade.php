@@ -18,14 +18,16 @@
 
         </form>
     </div>
-    <a class="nav-link text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
+    <div class="pt-3">
+        <a href="{{ route('logout') }}" onclick="event.preventDefault();
         document.getElementById('logout-form').submit();">
-        <p class="text-dark btn-text">
-            ออกจากระบบ
-        </p>
-    </a>
-    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-        @csrf
-    </form>
+            <p class="btn btn-danger btn-text">
+                ออกจากระบบ
+            </p>
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
+    </div>
 </div>
 @endsection
