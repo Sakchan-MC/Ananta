@@ -91,7 +91,8 @@ window.insertimg = function () {
             const reader = new FileReader()
             reader.onload = (e) => {
                 Swal.fire({
-                    title: 'Your uploaded picture',
+                    title: 'ยืนยันรูปภาพ',
+                    confirmButtonText: 'ตกลง',
                     imageUrl: e.target.result,
                     imageWidth: 400,
                     imageHeight: 300,
@@ -139,7 +140,8 @@ window.editimg = function (id) {
             const reader = new FileReader()
             reader.onload = (e) => {
                 Swal.fire({
-                    title: 'Your uploaded picture',
+                    title: 'ยืนยันรูปภาพ',
+                    confirmButtonText: 'ตกลง',
                     imageUrl: e.target.result,
                     imageWidth: 400,
                     imageHeight: 300,

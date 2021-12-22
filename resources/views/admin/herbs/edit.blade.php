@@ -1,8 +1,8 @@
 @extends('admin/layouts/app')
 @section('content')
 
-<div class=" wrapper">
-    <div class="table-responsive content-wrapper  table-margin">
+<div class=" wrapper ">
+    <div class="content-wrapper table-margin">
         <h2>แก้ไขข้อมูล</h2>
         <form action="{{ route('update-herb', $herb) }}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
@@ -12,13 +12,13 @@
             </div>
             <div class="form-group">
                 <label for="name">สรรพคุณ</label>
-                <input type="text" class="form-control" id="description" name="description"
-                    value="{{$herb->description}}">
+                <textarea class="form-control" id="exampleFormControlTextarea1" id="description" name="description"
+                    rows="10" >{{$herb->description}}</textarea>
             </div>
             <div class="form-group">
                 <label for="picture">รูปภาพ</label>
                 <br>
-                <input type="file" name="image" id="image">
+                <input class="form-control form-control-lg" id="image" name="image" type="file">
             </div>
             <button type="submit" name="submit" class="btn btn-success">Submit</button>
         </form>

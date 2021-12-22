@@ -1,8 +1,8 @@
 @extends('admin/layouts/app')
 @section('content')
 
-<div class=" wrapper">
-    <div class="table-responsive content-wrapper  table-margin">
+<div class=" wrapper ">
+    <div class="content-wrapper table-margin">
         <h2>แก้ไขข้อมูล</h2>
         <form action="{{ route('update-content', $content) }}" method="post">
             {{csrf_field()}}

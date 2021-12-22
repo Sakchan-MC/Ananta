@@ -1,8 +1,8 @@
 @extends('admin.layouts.app')
 @section('content')
 
-<div class=" wrapper container-fluid">
-    <div class="table-responsive content-wrapper table-margin ">
+<div class=" wrapper ">
+    <div class="content-wrapper table-margin">
         <h2>เพิ่มข้อมูลหน้าแรก</h2>
         <form action="{{route('create-content')}}" method="post">
             {{csrf_field()}}

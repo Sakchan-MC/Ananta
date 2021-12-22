@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Image;
 
 class HerbController extends Controller
 {
@@ -31,7 +30,6 @@ class HerbController extends Controller
             $fileName = Str::random(10) . '.' . $request->file('image')->getClientOriginalExtension();
             $destinationPath = public_path() . '/admin/images/herbs';
             $file->move($destinationPath, $fileName);
-            Image::make(public_path() . '/admin/images/herbs/' . $fileName);
             $herb->image = $fileName;
         } else {
             $herb->image = 'default.png';
@@ -49,17 +47,17 @@ class HerbController extends Controller
     {
         $herb = Herb::find($herb_id);
         $filename = $herb->image;
-        File::delete(public_path() . '/admin/images/herbs/' . $filename);
         if ($request->hasFile('image')) {
+            File::delete(public_path() . '/admin/images/herbs/' . $filename);
+
             $file = $request->file('image');
-            $fileName = Str::random(10) . '.' . $request->file('image')->getClientOriginalExtension();
+            $fileName = $herb->image;
             $destinationPath = public_path() . '/admin/images/herbs';
             $file->move($destinationPath, $fileName);
-            Image::make(public_path() . '/admin/images/herbs/' . $fileName);
             $new = $fileName;
         } else {
-            $new = 'default.png';
         };
+        $new = $herb->image;
         Herb::updateOrCreate(
             [
                 'id' => $herb_id
