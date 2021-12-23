@@ -62,6 +62,8 @@ Route::group(['prefix' => 'admin'], function () {
             Route::post('edit/{id}', 'BackgroundController@update')->name('update-background');
             Route::get('delete/{id}', 'BackgroundController@delete');
         });
+
+
         //User
         Route::group(['prefix' => 'users'], function () {
             Route::get('/', 'admin\AdminController@user')->name('user');

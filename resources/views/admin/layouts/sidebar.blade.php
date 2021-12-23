@@ -16,7 +16,7 @@
                 <li class="nav-item menu-open ">
                     <a href="{{route('admin')}}"
                         class="nav-link {{ (request()->is('admin/dashboard')) ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        {{-- <i class="nav-icon fas fa-tachometer-alt"></i> --}}
                         <p class="text-white ">
                             หน้าแรก
                         </p>
@@ -24,7 +24,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{route('herb')}}" class="nav-link {{ (request()->is('admin/herbs*')) ? 'active' : '' }}">
-                        <i class="nav-icon far fa-image"></i>
+                        {{-- <i class="nav-icon far fa-image"></i> --}}
                         <p class="text-white">
                             จัดการสมุนไพร
                         </p>
@@ -33,7 +33,7 @@
                 <li class="nav-item">
                     <a href="{{route('content')}}"
                         class="nav-link {{ (request()->is('admin/contents*')) ? 'active' : '' }}">
-                        <i class="nav-icon far fa-image"></i>
+                        {{-- <i class="nav-icon far fa-image"></i> --}}
                         <p class="text-white">
                             แก้ไขข้อมูลหน้าแรก
                         </p>
@@ -42,7 +42,7 @@
                 <li class="nav-item">
                     <a href="{{route('background')}}"
                         class="nav-link {{ (request()->is('admin/background*')) ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-columns"></i>
+                        {{-- <i class="nav-icon fas fa-columns"></i> --}}
                         <p class="text-white">
                             ภาพพื้นหลังหน้าแรก
                         </p>
@@ -51,7 +51,7 @@
                 <li class="nav-item">
                     <a href="{{route('user')}}"
                         class="nav-link {{ (request()->is('admin/users*')) ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-columns"></i>
+                        {{-- <i class="nav-icon fas fa-columns"></i> --}}
                         <p class="text-white">
                             จัดการผู้ใช้งาน
                         </p>
@@ -64,7 +64,7 @@
 
                     <a class="nav-link text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
-                        <i class="nav-icon fas fa-sign-out-alt gray"></i>
+                        {{-- <i class="nav-icon fas fa-sign-out-alt gray"></i> --}}
                         <p class="text-white">
                             ออกจากระบบ
                         </p>

@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 window.deleteConfirm = function (id, url) {
     Swal.fire({
         icon: 'warning',
-        text: 'ต้องการลบข้อมูลนี้หรือไม่?',
+        title: 'ต้องการลบข้อมูลนี้หรือไม่?',
         showCancelButton: true,
         confirmButtonText: 'ลบ',
         cancelButtonText: 'ยกเลิก',

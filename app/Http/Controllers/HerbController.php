@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Herb;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
@@ -10,6 +9,7 @@ use Illuminate\Support\Str;
 
 class HerbController extends Controller
 {
+
     public function index()
     {
         $herb = Herb::all();
@@ -21,6 +21,14 @@ class HerbController extends Controller
     }
     public function create(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+        ],
+        [
+            'name.required' => 'ต้องกรอกชื่อสมุนไพร',
+            'description.required' => 'ต้องกรอกรายละเอียดสมุนไพร',
+        ]);
         $herb = new Herb();
         $herb->name = $request->name;
         $herb->description = $request->description;
