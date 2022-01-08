@@ -4,7 +4,7 @@
 <div class="container home-section text-center">
     <h2 class="home-font">ข้อมูลผู้ใช้</h2>
     <div class="col-auto-md">
-        <img src="{{ asset('img/home-3.png') }}" class="profile-border">
+        <img src="{{ asset('public/img/home-3.png') }}" class="profile-border">
 
         <form action="{{ route('update-profile', $user) }}" method="post">
             {{csrf_field()}}

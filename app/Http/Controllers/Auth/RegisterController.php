@@ -53,6 +53,10 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ], [
+            'name.required' => 'กรุณากรอกชื่อ',
+            'username.required' => 'กรุณากรอกชื่อผู้ใช้งาน',
+            'password.required' => 'กรุณากรอกรหัสผ่าน',
         ]);
     }
 
@@ -64,6 +68,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
         return User::create([
             'name' => $data['name'],
             'username' => $data['username'],

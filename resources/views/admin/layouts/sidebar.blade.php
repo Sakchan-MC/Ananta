@@ -30,15 +30,14 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{route('content')}}"
                         class="nav-link {{ (request()->is('admin/contents*')) ? 'active' : '' }}">
-                        {{-- <i class="nav-icon far fa-image"></i> --}}
                         <p class="text-white">
                             แก้ไขข้อมูลหน้าแรก
                         </p>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a href="{{route('background')}}"
                         class="nav-link {{ (request()->is('admin/background*')) ? 'active' : '' }}">
