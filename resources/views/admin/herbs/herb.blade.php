@@ -29,7 +29,7 @@
                         <td class="col-md-4">{{$herb->description}}</td>
                         <td class="col-md-3">
                             <a href="{{url('/admin/herbs/edit/'.$herb->id)}}" class="btn btn-success">แก้ไข</a>
-                            <a href="#" onclick="deleteConfirm('{{$herb->id}}','herbs') " class="btn btn-danger mt-3">ลบ</a>
+                            <a href="#" onclick="deleteConfirm('{{$herb->id}}','herbs') " class="btn btn-danger">ลบ</a>
                         </td>
                     </tr>
                     @endforeach

@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Image;
 
 class BackgroundController extends Controller
 {
@@ -29,7 +28,6 @@ class BackgroundController extends Controller
             $fileName = Str::random(10) . '.' . $request->file('image')->getClientOriginalExtension();
             $destinationPath = public_path() . '/admin/images/backgrounds';
             $file->move($destinationPath, $fileName);
-            Image::make(public_path() . '/admin/images/backgrounds/' . $fileName);
             $background->image = $fileName;
         } else {
             $background->image = 'default.png';
@@ -53,12 +51,10 @@ class BackgroundController extends Controller
             $background = Background::find($background_id);
             $filename = $background->image;
             File::delete(public_path() . '/admin/images/backgrounds/' . $filename);
-
             $file = $request->file('image');
             $fileName = $background->image;
             $destinationPath = public_path() . '/admin/images/backgrounds';
             $file->move($destinationPath, $fileName);
-            Image::make(public_path() . '/admin/images/backgrounds/' . $fileName);
             $background->image = $fileName;
         } else {
             $new = $background->image;

@@ -4,7 +4,8 @@
     <div class=" wrapper ">
         <div class="content-wrapper table-margin">
             <h2>เพิ่มสมุนไพร</h2>
-            <form action="{{ route('create-herb') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('create-herb') }}" method="post" enctype="multipart/form-data"
+                onsubmit="return newitem(this);">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="name">ชื่อ</label>
@@ -17,7 +18,7 @@
                     <label for="exampleFormControlTextarea1">สรรพคุณ</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" id="description" name="description"
                         rows="10"></textarea>
-                        @error('description')
+                    @error('description')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
@@ -25,6 +26,9 @@
                     <label for="picture">รูปภาพ</label>
                     <br>
                     <input class="form-control form-control-lg" id="image" name="image" type="file">
+                    @error('image')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
                 </div>
                 <button type="submit" name="submit" class="btn btn-success">เพิ่มข้อมูล</button>
             </form>

@@ -5294,8 +5294,9 @@ window.deleteConfirm = function (id, url) {
     confirmButtonColor: "#e3342f"
   }).then(function (result) {
     if (result.isConfirmed) {
-      sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire("การลบข้อมูลสำเร็จ", "รายการที่เลือกถูกลบแล้ว", "success");
-      window.location.href = url + "/delete/" + id;
+      sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire("การลบข้อมูลสำเร็จ", "รายการที่เลือกถูกลบแล้ว", "success").then(function () {
+        window.location.href = url + "/delete/" + id;
+      });
     }
   });
 };
@@ -5317,8 +5318,9 @@ window.changestatus0 = function (id) {
       var request = new XMLHttpRequest();
       request.open("POST", "background/edit/" + id);
       request.send(formData);
-      window.location = window.location + "#loaded";
-      window.location.reload();
+      sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire("เปิดการใช้งานรูปภาพสำเร็จ", "รูปภาพถูกเปิดการใช้งานแล้ว", "success").then(function () {
+        location.reload();
+      });
     }
   });
 };
@@ -5340,15 +5342,14 @@ window.changestatus1 = function (id) {
       var request = new XMLHttpRequest();
       request.open("POST", "background/edit/" + id);
       request.send(formData);
-      window.location = window.location + "#loaded";
-      window.location.reload();
+      sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire("ปิดการใช้งานรูปภาพสำเร็จ", "รูปภาพถูกปิดการใช้งานแล้ว", "success").then(function () {
+        location.reload();
+      });
     }
   });
 };
 
 window.insertimg = function () {
-  var formData = new FormData();
-
   _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
     var _yield$Swal$fire, file, reader;
 
@@ -5362,7 +5363,7 @@ window.insertimg = function () {
               input: "file",
               inputAttributes: {
                 accept: "image/*",
-                "aria-label": "Upload your profile picture"
+                "aria-label": "เลือกรูปภาพ"
               },
               confirmButtonText: "เพิ่มรูปภาพ"
             });
@@ -5384,13 +5385,15 @@ window.insertimg = function () {
                   imageAlt: "The uploaded picture"
                 }).then(function (result) {
                   if (result.isConfirmed) {
+                    var formData = new FormData();
                     formData.append("image", file);
                     formData.append("_token", $('meta[name="csrf-token"]').attr("content"));
                     var request = new XMLHttpRequest();
                     request.open("POST", "background/create");
                     request.send(formData);
-                    window.location = window.location + "#loaded";
-                    window.location.reload();
+                    sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire("เพิ่มรูปภาพสำเร็จ", "รูปภาพถูกเพิ่มแล้ว", "success").then(function () {
+                      location.reload();
+                    });
                   }
                 });
               };
@@ -5450,8 +5453,9 @@ window.editimg = function (id) {
                     var request = new XMLHttpRequest();
                     request.open("POST", "background/edit/" + id);
                     request.send(formData);
-                    window.location = window.location + "#loaded";
-                    window.location.reload();
+                    sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire("แก้ไขรูปภาพสำเร็จ", "แก้ไขรูปภาพเรียบร้อยแล้ว", "success").then(function () {
+                      location.reload();
+                    });
                   }
                 });
               };
@@ -5485,8 +5489,9 @@ window.userstatus0 = function (id, name) {
       var request = new XMLHttpRequest();
       request.open("POST", "users/edit/" + id);
       request.send(formData);
-      window.location = window.location + "#loaded";
-      window.location.reload();
+      sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire("ผู้ใช้ " + name + " เป็น Admin เรียบร้อยแล้ว", "ผู้ใช้นี้จะเป็น Admin และสามารถเข้าถึงระบบได้", "success").then(function () {
+        location.reload();
+      });
     }
   });
 };
@@ -5508,10 +5513,58 @@ window.userstatus1 = function (id, name) {
       var request = new XMLHttpRequest();
       request.open("POST", "users/edit/" + id);
       request.send(formData);
-      window.location = window.location + "#loaded";
-      window.location.reload();
+      sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire("ผู้ใช้ " + name + " เป็น User เรียบร้อยแล้ว", "ผู้ใช้นี้จะเป็น User และไม่สามารถเข้าถึงระบบได้", "success").then(function () {
+        location.reload();
+      });
     }
   });
+};
+
+window.newitem = function () {
+  if ($("#name").val() == "") {
+    sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+      icon: "error",
+      title: "กรุณากรอก ชื่อ",
+      text: "กรุณากรอกข้อมูลให้ครบถ้วน",
+      showConfirmButton: false,
+      timer: 1000
+    });
+    return false;
+  } else if ($("#description").val() == "") {
+    sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+      icon: "error",
+      title: "กรุณากรอก สรรพคุณ",
+      text: "กรุณากรอกข้อมูลให้ครบถ้วน",
+      showConfirmButton: false,
+      timer: 1000
+    });
+    return false;
+  } else if ($("#image").val() == "") {
+    sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+      icon: "error",
+      title: "กรุณาเลือกรูปภาพ",
+      text: "กรุณากรอกข้อมูลให้ครบถ้วน",
+      showConfirmButton: false,
+      timer: 1000
+    });
+    return false;
+  } else {
+    var Toast = sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: function didOpen(toast) {
+        toast.addEventListener('mouseenter', (sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().stopTimer));
+        toast.addEventListener('mouseleave', (sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().resumeTimer));
+      }
+    });
+    Toast.fire({
+      icon: 'success',
+      title: 'Signed in successfully'
+    });
+  }
 };
 
 /***/ }),
