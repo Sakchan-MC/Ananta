@@ -5,7 +5,7 @@
         <div class="content-wrapper table-margin">
             <h2>เพิ่มสมุนไพร</h2>
             <form action="{{ route('create-herb') }}" method="post" enctype="multipart/form-data"
-                onsubmit="return newitem(this);">
+                onsubmit="return newherb(this);">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="name">ชื่อ</label>
@@ -16,8 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">สรรพคุณ</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" id="description" name="description"
-                        rows="10"></textarea>
+                    <textarea class="form-control" id="description" name="description" rows="10"></textarea>
                     @error('description')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror

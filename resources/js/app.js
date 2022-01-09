@@ -11,11 +11,12 @@ window.deleteConfirm = function (id, url) {
         confirmButtonColor: "#e3342f",
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire(
-                "การลบข้อมูลสำเร็จ",
-                "รายการที่เลือกถูกลบแล้ว",
-                "success"
-            ).then(() => {
+            Swal.fire({
+                title: "ลบข้อมูลสำเร็จ",
+                icon: "success",
+                confirmButtonColor: "#3085d6",
+                confirmButtonText: "ตกลง",
+            }).then(() => {
                 window.location.href = url + "/delete/" + id;
             });
         }
@@ -239,7 +240,7 @@ window.userstatus1 = function (id, name) {
         }
     });
 };
-window.newitem = function () {
+window.newherb = function () {
     if ($("#name").val() == "") {
         Swal.fire({
             icon: "error",
@@ -261,7 +262,7 @@ window.newitem = function () {
     } else if ($("#image").val() == "") {
         Swal.fire({
             icon: "error",
-            title: "กรุณาเลือกรูปภาพ",
+            title: "กรุณาเลือก รูปภาพ",
             text: "กรุณากรอกข้อมูลให้ครบถ้วน",
             showConfirmButton: false,
             timer: 1000,
@@ -270,19 +271,57 @@ window.newitem = function () {
     } else {
         const Toast = Swal.mixin({
             toast: true,
-            position: 'top-end',
+            position: "top-end",
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
             didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-          })
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+        });
 
-          Toast.fire({
-            icon: 'success',
-            title: 'Signed in successfully'
-          })
+        Toast.fire({
+            icon: "success",
+            title: "กำลังบันทึกข้อมูล",
+        });
+    }
+};
+window.editherb = function () {
+    if ($("#name").val() == "") {
+        Swal.fire({
+            icon: "error",
+            title: "ชื่อ ห้ามเว้นว่าง",
+            text: "กรุณากรอกข้อมูลให้ครบถ้วน",
+            showConfirmButton: false,
+            timer: 1000,
+        });
+        return false;
+    } else if ($("#description").val() == "") {
+        Swal.fire({
+            icon: "error",
+            title: "สรรพคุณ ห้ามเว้นว่าง",
+            text: "กรุณากรอกข้อมูลให้ครบถ้วน",
+            showConfirmButton: false,
+            timer: 1000,
+        });
+        return false;
+    } else {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+        });
+
+        Toast.fire({
+            icon: "success",
+            title: "กำลังบันทึกข้อมูล",
+        });
     }
 };

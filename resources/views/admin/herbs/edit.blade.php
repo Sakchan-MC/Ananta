@@ -4,7 +4,7 @@
 <div class=" wrapper ">
     <div class="content-wrapper table-margin">
         <h2>แก้ไขข้อมูล</h2>
-        <form action="{{ route('update-herb', $herb) }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('update-herb', $herb) }}" method="post" enctype="multipart/form-data"  onsubmit="return editherb(this)">
             {{csrf_field()}}
             <div class=" form-group">
                 <label for="name">ชื่อ</label>

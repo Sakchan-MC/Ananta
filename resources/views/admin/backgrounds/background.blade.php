@@ -24,11 +24,11 @@
                         @foreach ($background as $background)
                             <tr>
 
-                                <td class="col-md-3"><img
+                                <td class="col-md-5"><img
                                         src="{{ asset('admin/images/backgrounds/' . $background->image) }}"
                                         class="background-img" />
                                 </td>
-                                <td class="col-2">
+                                <td class="col-md-3">
                                     @if ($background->status == 0)
                                         <a href="#" class="btn btn-success"
                                             onclick="changestatus0('{{ $background->id }}','background') ">เปิด</a>
@@ -36,11 +36,8 @@
                                         <a href="#" class="btn btn-danger"
                                             onclick="changestatus1('{{ $background->id }}','background')">ปิด</a>
                                     @endif
-
-
-
                                 </td>
-                                <td class=" col-3">
+                                <td class="col-md-4">
                                     <a href="#" class="btn btn-success"
                                         onclick="editimg('{{ $background->id }}','background')">แก้ไข</a>
                                     <a href="#" onclick="deleteConfirm('{{ $background->id }}','background') "

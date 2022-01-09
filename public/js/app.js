@@ -5294,7 +5294,12 @@ window.deleteConfirm = function (id, url) {
     confirmButtonColor: "#e3342f"
   }).then(function (result) {
     if (result.isConfirmed) {
-      sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire("การลบข้อมูลสำเร็จ", "รายการที่เลือกถูกลบแล้ว", "success").then(function () {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+        title: "ลบข้อมูลสำเร็จ",
+        icon: "success",
+        confirmButtonColor: "#3085d6",
+        confirmButtonText: "ตกลง"
+      }).then(function () {
         window.location.href = url + "/delete/" + id;
       });
     }
@@ -5520,7 +5525,7 @@ window.userstatus1 = function (id, name) {
   });
 };
 
-window.newitem = function () {
+window.newherb = function () {
   if ($("#name").val() == "") {
     sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
       icon: "error",
@@ -5542,7 +5547,7 @@ window.newitem = function () {
   } else if ($("#image").val() == "") {
     sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
       icon: "error",
-      title: "กรุณาเลือกรูปภาพ",
+      title: "กรุณาเลือก รูปภาพ",
       text: "กรุณากรอกข้อมูลให้ครบถ้วน",
       showConfirmButton: false,
       timer: 1000
@@ -5551,18 +5556,56 @@ window.newitem = function () {
   } else {
     var Toast = sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().mixin({
       toast: true,
-      position: 'top-end',
+      position: "top-end",
       showConfirmButton: false,
       timer: 3000,
       timerProgressBar: true,
       didOpen: function didOpen(toast) {
-        toast.addEventListener('mouseenter', (sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().stopTimer));
-        toast.addEventListener('mouseleave', (sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().resumeTimer));
+        toast.addEventListener("mouseenter", (sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().stopTimer));
+        toast.addEventListener("mouseleave", (sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().resumeTimer));
       }
     });
     Toast.fire({
-      icon: 'success',
-      title: 'Signed in successfully'
+      icon: "success",
+      title: "กำลังบันทึกข้อมูล"
+    });
+  }
+};
+
+window.editherb = function () {
+  if ($("#name").val() == "") {
+    sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+      icon: "error",
+      title: "ชื่อ ห้ามเว้นว่าง",
+      text: "กรุณากรอกข้อมูลให้ครบถ้วน",
+      showConfirmButton: false,
+      timer: 1000
+    });
+    return false;
+  } else if ($("#description").val() == "") {
+    sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+      icon: "error",
+      title: "สรรพคุณ ห้ามเว้นว่าง",
+      text: "กรุณากรอกข้อมูลให้ครบถ้วน",
+      showConfirmButton: false,
+      timer: 1000
+    });
+    return false;
+  } else {
+    var Toast = sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: function didOpen(toast) {
+        toast.addEventListener("mouseenter", (sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().stopTimer));
+        toast.addEventListener("mouseleave", (sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().resumeTimer));
+      }
+    });
+    Toast.fire({
+      icon: "success",
+      title: "กำลังบันทึกข้อมูล"
     });
   }
 };
