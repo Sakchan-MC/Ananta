@@ -147,7 +147,54 @@
 
             @endfor
         @else
+            <div class=" row justify-content-between  align-items-center">
+                <div class="col-md  text-center">
+                    <img src="{{ asset('img/home-aloe.jpg') }}" style="width:200px;height:200px;">
+                </div>
+                <div class="col-md ">
+                    <span class="home-font ">ว่านหางจระเข้</span><br>
 
+                    <span class="text-p">ไม้ล้มลุกใบใหญ่หนาที่ทุกคนรู้จักกันดี
+                        แม้ถิ่นกำเนิดจะอยู่ไกลถึงฝั่งเมดิเตอร์ เรเนียน และแอฟริกา
+                        แต่ในประเทศไทยก็มีการปลูกว่านหางจระเข้อย่างแพร่หลาย
+                        ซึ่งในตำรับยาไทยก็ใช้ว่านหางจระเข้บำบัดอาการต่าง ๆ ได้มากมาย
+                        จนเป็นที่รู้จักว่า เป็นพืชอัศจรรย์ที่มีสรรพคุณสารพัดประโยชน์ โดย “วุ้นในใบสด”
+                        สามารถนำมาบรรเทาอาการปวดศีรษะได้</span>
+                </div>
+
+            </div>
+            <br>
+            <div class=" row justify-content-between  align-items-center">
+                <div class="col-md  text-center">
+                    <img src="{{ asset('img/herbs/Turmeric.jpg') }}" style="width:200px;height:200px;">
+                </div>
+                <div class="col-md ">
+                    <span class="home-font ">ขมิ้นชัน</span><br>
+
+                    <span class="text-p">เรียกกันทั่วไปว่า “ขมิ้น” เป็นไม้ล้มลุกมีสีเหลืองอมส้ม
+                        มีเหง้าอยู่ใต้ดิน มีกลิ่นหอม คนนิยมนำ “เหง้า”
+                        ทั้งสดและแห้งมาใช้รักษาอาการที่เกี่ยวกับกระเพาะอาหาร
+                        รวมทั้งแก้ท้องเสีย ท้องร่วง จุกเสียดแน่นท้อง และสามารถนำขมิ้นชันมาทาภายนอก
+                        เพื่อใช้รักษาแผลเรื้อรัง แผลสด โรคผิวหนัง พุพอง รักษาชันนะตุ</span>
+                </div>
+
+            </div>
+            <br>
+            <div class=" row justify-content-between  align-items-center">
+                <div class="col-md  text-center">
+                    <img src="{{ asset('img/herbs/Thong_Panchang.jpg') }}" style="width:200px;height:200px;">
+                </div>
+                <div class="col-md ">
+                    <span class="home-font ">ทองพันชั่ง</span><br>
+
+                    <span class="text-p">เป็นสมุนไพรที่มีคุณค่าไม่ต่างไปจากชื่อ “ทองพันชั่ง”
+                        หลายพื้นที่อาจเรียกว่า “ทองคันชั่ง” หรือ “หญ้ามันไก่” เป็นไม้พุ่มขนาดเล็ก
+                        ออกดอกสีขาว ส่วนที่ใช้ทำยาคือ ใบและราก ที่หากนำปริมาณ 1 กำมือมาต้มรับประทานเช้าเย็น
+                        จะช่วยดับพิษไข้ รักษาโรคผิวหนัง ริดสีดวงทวารหนัก แก้ไอเป็นเลือด ฆ่า</span>
+                </div>
+
+            </div>
+            <br>
         @endif
 
 

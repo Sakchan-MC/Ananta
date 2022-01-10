@@ -12,7 +12,7 @@
             </div>
             <div class="form-group">
                 <label for="name">สรรพคุณ</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" id="description" name="description"
+                <textarea class="form-control" id="description" name="description"
                     rows="10" >{{$herb->description}}</textarea>
             </div>
             <div class="form-group">
