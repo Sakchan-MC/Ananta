@@ -11,14 +11,7 @@ window.deleteConfirm = function (id, url) {
         confirmButtonColor: "#e3342f",
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire({
-                title: "ลบข้อมูลสำเร็จ",
-                icon: "success",
-                confirmButtonColor: "#3085d6",
-                confirmButtonText: "ตกลง",
-            }).then(() => {
-                window.location.href = url + "/delete/" + id;
-            });
+            window.location.href = url + "/delete/" + id;
         }
     });
 };

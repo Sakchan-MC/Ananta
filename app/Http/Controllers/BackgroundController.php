@@ -77,6 +77,6 @@ class BackgroundController extends Controller
         $filename = $background->image;
         File::delete(public_path() . '/admin/images/backgrounds/' . $filename);
         Background::destroy($background_id);
-        return redirect()->route('background');
+        return redirect()->route('background')->with('delete', 'Background has been deleted');
     }
 }

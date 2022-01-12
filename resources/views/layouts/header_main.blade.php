@@ -9,7 +9,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end text-center" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class=" ">
                     <a class="nav-link selector header-font" href="#home">หน้าแรก</a>
                 </li>
                 <li class="nav-item">
