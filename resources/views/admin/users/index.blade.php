@@ -52,4 +52,3 @@
     </div>
 </div>
 @endsection
-@extends('admin/layouts/edit_user')

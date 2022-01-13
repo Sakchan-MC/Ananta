@@ -33,7 +33,7 @@
                         <div class="form-group">
                             <input id="username" type="text"
                                 class="form-control @error('username') is-invalid @enderror" name="username"
-                                value="{{ old('username') }}" placeholder="ชื่อผู้ใช้" required autocomplete="username">
+                                value="{{ old('username') }}" placeholder="ชื่อผู้ใช้">
 
                             @error('username')
                             <span class="invalid-feedback" role="alert">
